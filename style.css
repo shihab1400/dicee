@@ -123,3 +123,9 @@ img {
 .coverBottom {
     text-align: center;
 }
+
+@media (max-width: 800px) {
+    .heading1 {
+        display: none;
+    }
+}
