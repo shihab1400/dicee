@@ -35,6 +35,7 @@ body {
     font-size: 3rem;
     margin-top: -1.5rem;
     color: #00ff88;
+    display: none;
 }
 
 .headingPlayer {
