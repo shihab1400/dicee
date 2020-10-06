@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body {
+    font-family: 'Indie Flower', cursive;
+    font-size: 62.5%;
+    background-color: #393E46;
+    height: 39rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.forHeading {
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+}
+
+.heading {
+    font-family: 'Lobster', cursive;
+    font-size: 4rem;
+    text-align: center;
+    color: #4ECCA3;
+}
+
+.heading1 {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    font-size: 3rem;
+    margin-top: -1.5rem;
+    color: #00ff88;
+}
+
+.headingPlayer {
+    display: inline;
+    color: #4ECCA3;
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+
+.forFooter {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    color: #eee;
+}
+
+.forPlayers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    width: 35rem;
+    margin: auto;
+}
+
+img {
+    width: 12rem;
+}
+
+.icon {
+    color: red;
+}
+
+
+
+.redColor {
+    color: red;
+}
+
+
+.hide {
+    display: none;
+}
+
+
+
+
+.btn {
+    padding: 10px 20px;
+    font-size: 2rem;
+    background: linear-gradient(to bottom right, #34b4a3, #149144);
+    border: none;
+    outline: none;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    border-radius: 1rem 2rem;
+    text-shadow: 5px 2px 3px #222;
+    box-shadow: 5px 3px 10px #000000;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.btn:hover {
+    background: linear-gradient(to top left, #34b4a3, #149144);
+    transform: translateY(-2px);
+    letter-spacing: 1px;
+    box-shadow: 6px 5px 12px #000000;
+
+}
+
+.btn-container {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.roll {
+    color: #66ff00;
+}
+
+.dice {
+    color: #ffd900;
+}
+
+.coverBottom {
+    text-align: center;
+}
