@@ -15,6 +15,111 @@
 <body>
     <section>
 
+        <p>
+            #include <iostream>
+
+using namespace std;
+
+struct Node {
+    int data;
+    Node* left;
+    Node* right;
+};
+
+Node* createNode(int value) {
+    Node* newNode = new Node();
+    newNode->data = value;
+    newNode->left = nullptr;
+    newNode->right = nullptr;
+    return newNode;
+}
+
+
+Node* insert(Node* root, int value) {
+    if (root == nullptr) {
+        return createNode(value);
+    }
+    if (value < root->data) {
+        root->left = insert(root->left, value);
+    } else if (value > root->data) {
+        root->right = insert(root->right, value);
+    }
+    return root;
+}
+
+
+bool search(Node* root, int value) {
+    if (root == nullptr) {
+        return false;
+    }
+    if (value == root->data) {
+        return true;
+    } else if (value < root->data) {
+        return search(root->left, value);
+    } else {
+        return search(root->right, value);
+    }
+}
+
+void inorderTraversal(Node* root) {
+    if (root == nullptr) {
+        return;
+    }
+    inorderTraversal(root->left);
+    cout << root->data << " ";
+    inorderTraversal(root->right);
+}
+void preorderTraversal(Node* root) {
+    if (root == nullptr) {
+        return;
+    }
+    cout << root->data << " ";
+    preorderTraversal(root->left);
+    preorderTraversal(root->right);
+}
+
+void postorderTraversal(Node* root) {
+    if (root == nullptr) {
+        return;
+    }
+    postorderTraversal(root->left);
+    postorderTraversal(root->right);
+    cout << root->data << " ";
+}
+
+int main() {
+    Node* root = nullptr;
+
+    root = insert(root, 12);
+    root = insert(root, 13);
+    root = insert(root, 14);
+    root = insert(root, 5);
+    root = insert(root, 6);
+    root = insert(root, 20);
+    root = insert(root, 1);
+    root = insert(root, 122);
+    root = insert(root, 19);
+    root = insert(root, 50);
+    root = insert(root, 2);
+
+
+    cout << "In Order: ";
+    inorderTraversal(root);
+    cout << endl;
+
+    cout << "Pre Order: ";
+    preorderTraversal(root);
+    cout << endl;
+
+    cout << "Post Order: ";
+    postorderTraversal(root);
+    cout << endl;
+
+    return 0;
+}
+
+        </p>
+
         <div class="forHeading">
             <h1 class="heading heading1">Refresh Me</h1>
             <h1 class="heading heading2 hide">Draw!</h1>
